@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const root = path.resolve(__dirname, '../Web polinetic');
+const root = path.resolve(__dirname, '..');
 let html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 html=html.replaceAll('Instalaciones eléctricas y energía solar en Palma de Mallorca','Instalaciones eléctricas y energía solar en Mallorca')
  .replace('Electricidad y energía solar en Palma de Mallorca','Electricidad y energía solar en Mallorca')

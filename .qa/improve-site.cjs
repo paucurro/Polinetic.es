@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const root = path.resolve(__dirname, '../Web polinetic');
+const root = path.resolve(__dirname, '..');
 const file = path.join(root, 'index.html');
 let html = fs.readFileSync(file, 'utf8');
 function replace(from, to) { if (!html.includes(from)) throw Error('Missing: ' + from.slice(0, 90)); html = html.replace(from, to); }

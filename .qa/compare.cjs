@@ -5,7 +5,7 @@ const {pathToFileURL}=require('node:url');
 (async()=>{
  const browser=await chromium.launch({channel:'chrome',headless:true});
  try {
-  for(const [name,url] of [['live','https://polinetic.es'],['proposal',pathToFileURL(path.resolve(__dirname,'../Web polinetic/index.html')).href]]) {
+  for(const [name,url] of [['live','https://polinetic.es'],['proposal',pathToFileURL(path.resolve(__dirname,'../index.html')).href]]) {
    const page=await browser.newPage({viewport:{width:1440,height:1000}});
    await page.goto(url,{waitUntil:'networkidle',timeout:45000});
    await page.evaluate(()=>document.fonts.ready);

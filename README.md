@@ -25,7 +25,9 @@ El servidor valida formato, campos, tamaño, origen y un campo trampa. Limita a 
 
 Si falla el envío se conserva el texto; si el navegador no puede confirmar la respuesta, no se afirma que se haya enviado. Para desactivar el envío directo, cambia `enabled` a `false` en `contact-config.php` o establece `POLINETIC_CONTACT_ENABLED=0` en el servidor.
 
-Para una vista previa con PHP, ejecuta desde la carpeta superior: `php -S 127.0.0.1:8080 -t "Web polinetic"`. La entrega de correo depende de la configuración de ese servidor. La aceptación por `mail()` no acredita recepción en el buzón: al publicar, comprobar la llegada real a `servicios@polinetic.es`, la respuesta al visitante y la configuración del remitente con el proveedor. Las pruebas locales capturan el correo sin enviarlo a Internet.
+La web está en la raíz del repositorio: `index.html`, los archivos PHP y `assets/` deben quedar directamente en la raíz pública del servidor. No es necesario configurar una subcarpeta «Web polinetic».
+
+Para una vista previa con PHP, ejecuta desde la raíz del proyecto: `php -S 127.0.0.1:8080 -t .`. La entrega de correo depende de la configuración de ese servidor. La aceptación por `mail()` no acredita recepción en el buzón: al publicar, comprobar la llegada real a `servicios@polinetic.es`, la respuesta al visitante y la configuración del remitente con el proveedor. Las pruebas locales capturan el correo sin enviarlo a Internet.
 
 ## Contenido pendiente y publicación
 
@@ -56,8 +58,8 @@ No hay cookies, analítica ni servicios externos incrustados. Medir conversiones
 
 El logo es una copia sin modificar de `polinetic_final_72.png`, facilitado por el cliente. Se mantiene su proporción original y se presenta sobre fondo blanco para conservar la legibilidad de sus colores.
 
-No es necesario publicar este README ni `CREDITOS.md`; los créditos ya aparecen en la web. Las herramientas y capturas de `../.qa/` son locales y no forman parte del sitio.
+No es necesario publicar este README ni `CREDITOS.md`; los créditos ya aparecen en la web. Las herramientas, dependencias, capturas y copias de prueba de `.qa/` son locales, están excluidas de Git y no forman parte del sitio.
 
 ## Validación
 
-Desde la carpeta superior, `node .qa/check-improvements.cjs`: servidor PHP real y SMTP local de captura, validación de campos, origen, antispam, fallo y éxito del correo, recuperación del formulario, límite de frecuencia, seis anchos, menú móvil, fichas, páginas legales, metadatos y vista previa sin servidor. Requiere PHP en PATH y el Playwright instalado en `.qa`. Usa una copia aislada en `.qa/runtime-*`; no envía correo a Internet.
+En este equipo, desde la raíz del proyecto, `node .qa/check-improvements.cjs`: servidor PHP real y SMTP local de captura, validación de campos, origen, antispam, fallo y éxito del correo, recuperación del formulario, límite de frecuencia, seis anchos, menú móvil, fichas, páginas legales, metadatos y vista previa sin servidor. Requiere PHP en PATH y el Playwright instalado en `.qa`. Usa una copia aislada en `.qa/runtime-*`; no envía correo a Internet. Estas herramientas locales no se incluyen al clonar el repositorio.

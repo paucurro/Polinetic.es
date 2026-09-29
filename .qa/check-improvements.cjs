@@ -5,9 +5,12 @@ const path=require('node:path');
 const net=require('node:net');
 const {spawn}=require('node:child_process');
 const {pathToFileURL}=require('node:url');
-const source=path.resolve(__dirname,'../Web polinetic');
+const source=path.resolve(__dirname,'..');
 const runtime=path.join(__dirname,'runtime-'+Date.now());
-fs.cpSync(source,runtime,{recursive:true});
+fs.mkdirSync(runtime);
+for(const entry of ['index.html','styles.css','app.js','config.js','contact.php','contact-config.php','aviso-legal.html','privacidad.html','robots.txt','sitemap.xml','assets']) {
+ fs.cpSync(path.join(source,entry),path.join(runtime,entry),{recursive:true});
+}
 const listen=server=>new Promise(resolve=>server.listen(0,'127.0.0.1',()=>resolve(server.address().port)));
 const close=server=>new Promise(resolve=>server.close(resolve));
 const messages=[];

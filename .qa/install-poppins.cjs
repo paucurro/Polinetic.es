@@ -1,6 +1,6 @@
 const fs=require('node:fs');
 const path=require('node:path');
-const root=path.resolve(__dirname,'../Web polinetic');
+const root=path.resolve(__dirname,'..');
 (async()=>{
  const source=fs.readFileSync(path.join(__dirname,'poppins-source.css'),'utf8');
  let declarations='/* Poppins, hosted locally. License: assets/fonts/Poppins-OFL.txt. */\n';

@@ -16,7 +16,7 @@
   navigation.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
   document.addEventListener('click', event => { if (!event.target.closest('.header')) closeMenu(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') { closeMenu(); menuButton.focus(); } });
-  window.matchMedia('(min-width: 701px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+  window.matchMedia('(min-width: 901px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
   const header = document.querySelector('.header');
   const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 15);
   window.addEventListener('scroll', updateHeader, { passive: true });

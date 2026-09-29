@@ -10,6 +10,7 @@ Abre `index.html` para revisar el diseño sin instalar nada. En esa modalidad el
 - Logo original facilitado por el cliente, en la cabecera, el pie de página y el favicon.
 - Menú móvil, animaciones al entrar en pantalla, efectos de imagen, preguntas desplegables y ventanas de detalle accesibles con teclado.
 - Respeto por la preferencia de movimiento reducido del dispositivo.
+- Poppins local en toda la web, incluidas las páginas legales y los formularios, con los alias de respaldo solicitados. Menú de 16 px (18 px desplegado), botones de 15–16 px y textos principales de 16 px. Pesos reales 400/500/600/700 y cursiva 400; licencia en `assets/fonts/Poppins-OFL.txt`.
 - Imágenes locales y funcionamiento sin dependencias externas, cookies ni analítica.
 
 ## Datos de contacto

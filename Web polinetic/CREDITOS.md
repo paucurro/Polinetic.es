@@ -1,6 +1,6 @@
 # Fotografías
 
-Tipografía Manrope, alojada localmente. Fuente original: https://github.com/google/fonts/tree/main/ofl/manrope. Licencia SIL Open Font License incluida en `assets/fonts/OFL.txt`.
+Tipografía Poppins, alojada localmente en WOFF2: pesos 400, 500, 600 y 700, más cursiva 400, con subconjuntos latino y latino extendido. Fuente original: https://github.com/google/fonts/tree/main/ofl/poppins. Archivos web obtenidos de Google Fonts. Licencia SIL Open Font License incluida en `assets/fonts/Poppins-OFL.txt`. Los alias de respaldo usan las fuentes del dispositivo indicadas por el cliente; la web no solicita fuentes a servidores externos.
 
 Descargadas de Pexels el 28 de septiembre de 2026. Las fichas consultadas las identifican como fotografías gratuitas. Licencia: https://www.pexels.com/license/
 
